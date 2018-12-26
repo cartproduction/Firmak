@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().replace(R.id.framelayout,Fragment3()).commit()
         bottomNavigationView.selectedItemId = R.id.menu_item3
+        BottomNavigationViewHelper.addBadge(bottomNavigationView,this,3)
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             var selectedFragment: Fragment? = null
@@ -25,7 +26,10 @@ class MainActivity : AppCompatActivity() {
                     R.id.menu_item1 -> selectedFragment = Fragment1()
                     R.id.menu_item2 -> selectedFragment = Fragment2()
                     R.id.menu_item3 -> selectedFragment = Fragment3()
-                    R.id.menu_item4 -> selectedFragment = Fragment4()
+                    R.id.menu_item4 -> {
+                        selectedFragment = Fragment4()
+                        BottomNavigationViewHelper.removeBadge(bottomNavigationView,this,3)
+                    }
                     R.id.menu_item5 -> selectedFragment = Fragment5()
                 }
                 val transaction = supportFragmentManager.beginTransaction()
@@ -33,9 +37,12 @@ class MainActivity : AppCompatActivity() {
                 transaction.commit()
             }
             true
+
+
         }
 
-        BottomNavigationViewHelper.addBadge(bottomNavigationView,this,3)
+
+
     }
 
 }

@@ -62,6 +62,13 @@ object BottomNavigationViewHelper {
         itemView.addView(badge)
     }
 
+    fun removeBadge(view: BottomNavigationView, activity : AppCompatActivity, field: Int) {
+        val bottomNavigationMenuView = view.getChildAt(0) as BottomNavigationMenuView
+        val v = bottomNavigationMenuView.getChildAt(field)
+        val itemView = v as BottomNavigationItemView
+        itemView.removeView(itemView.getChildAt(2))
+    }
+
     fun sizeIcon(view: BottomNavigationView, metrics: DisplayMetrics, float: Float){
         val menuView = view.getChildAt(0) as BottomNavigationMenuView
         for (i in 0 until menuView.childCount) {
