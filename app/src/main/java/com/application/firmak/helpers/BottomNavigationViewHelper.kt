@@ -1,4 +1,4 @@
-package nucleus.eti.br.bottombarnavigationview.helpers
+package com.application.firmak
 
 import android.support.annotation.IdRes
 import android.support.design.internal.BottomNavigationItemView
@@ -12,7 +12,6 @@ import android.support.v7.view.menu.MenuView
 import android.view.LayoutInflater
 import android.util.TypedValue
 import android.util.DisplayMetrics
-import com.application.firmak.R
 
 object BottomNavigationViewHelper {
 

@@ -5,10 +5,9 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
-import nucleus.eti.br.bottombarnavigationview.helpers.BottomNavigationViewHelper
 
 class MainActivity : AppCompatActivity() {
-
+//3.1.1 studio
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
